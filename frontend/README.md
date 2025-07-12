@@ -12,6 +12,7 @@ A full-stack personal finance management platform built with the **MERN Stack (M
 [![Watch the demo](https://img.youtube.com/vi/30FYGfqka7o/hqdefault.jpg)](https://www.youtube.com/watch?v=30FYGfqka7o&t=28s)
 
 ---
+---
 
 ## 📌 Features
 
