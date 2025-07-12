@@ -1,0 +1,220 @@
+/* Page Layout */
+.profile-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e6ccff, #d1a6ff);
+  color: #4b0082;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-content {
+  flex: 1;
+  padding: 30px;
+  margin-left: 240px;
+}
+
+.profile-content h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #e6ccff, #d1a6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.short-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.short-details h3 {
+  margin: 0;
+  color: #4b0082;
+}
+
+.profile-header p {
+  margin: 4px 0;
+  color: #a64dff;
+  font-size: 14px;
+}
+
+.profile-header .joined {
+  font-size: 13px;
+  color: #a64dff;
+}
+
+/* Section Title */
+.section h4 {
+  margin-top: 20px;
+  color: #a64dff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Fields */
+.field-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.field {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #cbb4ff;
+}
+
+.field input,
+.field textarea {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #4b0082;
+  background-color: #fff;
+  color: #4b0082;
+  font-size: 14px;
+}
+
+.field textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #a64dff;
+  box-shadow: 0 0 0 2px rgba(166, 77, 255, 0.25);
+}
+
+/* Buttons */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.button-row button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a64dff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-row button:hover {
+  background-color: #6a0dad;
+}
+
+.button-row button:first-child {
+  background-color: transparent;
+  border: 1px solid #a64dff;
+  color: #d1a6ff;
+}
+
+.button-row button:first-child:hover {
+  background-color: #4b0082;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-content {
+    margin-left: 0;
+    padding: 20px 16px;
+  }
+
+  .profile-content h2 {
+    font-size: 22px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .avatar-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .short-details h3 {
+    font-size: 18px;
+  }
+
+  .profile-header p,
+  .profile-header .joined {
+    font-size: 13px;
+  }
+
+  .section h4 {
+    font-size: 18px;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .field {
+    min-width: 100%;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .button-row button {
+    width: 100%;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,244 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 24px;
+  color: #4b0082;
+}
+
+.add-transaction-button {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-transaction-button:hover {
+  background-color: #d1a6ff;
+
+}
+
+/* Filters Section */
+.filters {
+  background-color: #fff;
+  border: 1px solid rgba(166, 77, 255, 0.15);
+  border-left: 6px solid #a64dff;
+  transition: transform 0.3s ease;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* .filters:hover {
+  transform: translate(-4px);
+} */
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.filter-item label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #6b21a8;
+}
+
+.filter-item select {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #6a0dad;
+  color: #6a0dad;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Transactions Table */
+.transactions {
+  background-color: #fff;
+  border: 1px solid rgba(166, 77, 255, 0.15);
+  border-left: 6px solid #a64dff;
+  transition: transform 0.3s ease;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(75, 0, 130, 0.1);
+}
+
+.transactions h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: #4b0082;
+}
+
+.transactions p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #6b21a8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #2e2040;
+}
+
+th {
+  color: #a64dff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+td {
+  color: #6b21a8;
+}
+
+
+td button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 6px 8px;
+  margin: 0 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+td button:hover {
+  background-color: #4b0082;
+}
+
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 24px 28px;
+}
+
+/* Label */
+.entry-form label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e6ccff;
+  margin-bottom: 2px;
+}
+
+.entry-form input::placeholder,
+.entry-form textarea::placeholder {
+  color: #e6ccff;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Focus Effect */
+.entry-form input:focus,
+.entry-form select:focus,
+.entry-form textarea:focus {
+  border-color: #d1a6ff;
+  box-shadow: 0 0 0 2px rgba(214, 166, 255, 0.3);
+}
+
+/* Submit Button */
+.entry-form button[type="submit"] {
+  margin-top: 12px;
+  padding: 12px;
+  background: #a64dff;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.entry-form button[type="submit"]:hover {
+  background: #d1a6ff;
+  color: #4b0082;
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .add-transaction-button {
+    padding: 10px 16px;
+    font-size: 13px;
+    width: 50%;
+    text-align: center;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 16px;
+    width: 85%;
+  }
+
+  .filter-item {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .transactions {
+    padding: 16px;
+    width: 85%;
+  }
+
+  table {
+    font-size: 13px;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+  }
+
+  .entry-form {
+    padding: 20px;
+  }
+
+  .entry-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+  }
+}
