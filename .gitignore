@@ -11,7 +11,9 @@ frontend/build/
 coverage/
 
 # Environment files
+# Secrets
 .env
+backend/.env
 .env.local
 .env.*.local
 .env.development.local
