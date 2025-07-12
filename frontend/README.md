@@ -7,10 +7,9 @@
 A full-stack personal finance management platform built with the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**. This application helps users **track income, expenses, set budgets, define goals, and generate financial reports** with intuitive visualizations and secure authentication.
 
 ---
-
 ## 📺 Demo
 
-[![Watch the demo](https://img.youtube.com/vi/-21-SGD_Tkc/hqdefault.jpg)](https://www.youtube.com/watch?v=-21-SGD_Tkc)
+[![Watch the demo](https://img.youtube.com/vi/30FYGfqka7o/hqdefault.jpg)](https://www.youtube.com/watch?v=30FYGfqka7o&t=28s)
 
 ---
 
