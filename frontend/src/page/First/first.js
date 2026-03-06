@@ -5,7 +5,7 @@ import "./style.css";
 
 const First = () => {
   const navigate = useNavigate();
-  const [showModal, setShowModal] = useState(false);
+  const [setShowModal] = useState(false);
 
   const handleLogin = () => {
     setShowModal(false);

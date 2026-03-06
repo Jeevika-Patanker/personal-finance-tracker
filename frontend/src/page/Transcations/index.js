@@ -18,7 +18,7 @@ function Transactions() {
   const [showModal, setShowModal] = useState(false);
 
   const token = localStorage.getItem("token");
-  const userId = localStorage.getItem("userId");
+  // const userId = localStorage.getItem("userId");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

@@ -18,7 +18,7 @@ function Reports() {
     fetchTransactions();
     fetchSummary();
 
-  }, [filters]);
+  }, [filters, fetchTransactions, fetchSummary]);
 
   const fetchSummary = async () => {
     try {
