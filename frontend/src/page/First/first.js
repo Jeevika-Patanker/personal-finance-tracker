@@ -5,15 +5,15 @@ import "./style.css";
 
 const First = () => {
   const navigate = useNavigate();
-  // const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleLogin = () => {
-    // setShowModal(false);
+    setShowModal(false);
     navigate("/login");
   };
 
   const handleRegister = () => {
-    // setShowModal(false);
+    setShowModal(false);
     navigate("/register");
   };
 
