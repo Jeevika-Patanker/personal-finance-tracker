@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../navbar";
 import "./style.css";
-import axios from "axios";
+import API from "../../api/api";
 import {
   LineChart, Line, XAxis, YAxis, Tooltip, Legend, CartesianGrid,
   BarChart, Bar, PieChart, Pie, Cell
@@ -26,7 +26,7 @@ function Dashboard() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await axios.get(`http://localhost:5000/api/dash/${userId}`, {
+      const res = await API.get(`/api/dash/${userId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEntries(res.data);

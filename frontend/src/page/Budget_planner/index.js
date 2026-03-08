@@ -1,7 +1,8 @@
 import Sidebar from "../navbar";
 import "./style.css";
 // import React, { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../api/api";
+
 import React, { useEffect, useState, useCallback } from "react";
 
 function BudgetPlanner() {
@@ -22,12 +23,11 @@ function BudgetPlanner() {
 
 
   const fetchBudgets = useCallback(() => {
-    axios
-      .get("http://localhost:5000/api/budgets", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+    API.get("/api/budgets", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
       .then((res) => {
         console.log("Fetched budgets:", res.data);
         setBudgets(res.data);
@@ -39,7 +39,7 @@ function BudgetPlanner() {
   useEffect(() => {
     fetchBudgets();
   }, [fetchBudgets]);
-  
+
 
   const handleAddBudget = () => {
     const { category, budget, spent, month } = newBudget;
@@ -50,17 +50,16 @@ function BudgetPlanner() {
     console.log("Creating budget with:", newBudget);
     console.log("Token:", token);
 
-    axios
-      .post("http://localhost:5000/api/budgets", {
-        category,
-        spent: Number(spent),
-        budget: Number(budget),
-        month
-      }, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
+    API.post("/api/budgets", {
+      category,
+      spent: Number(spent),
+      budget: Number(budget),
+      month
+    }, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
       .then(() => {
         setNewBudget({
           category: "",
@@ -76,8 +75,8 @@ function BudgetPlanner() {
   };
 
   const handleDelete = (id) => {
-    axios
-      .delete(`http://localhost:5000/api/budgets/${id}`, {
+    API.delete(`/api/budgets/${id}`
+      , {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -101,17 +100,17 @@ function BudgetPlanner() {
       return;
     }
 
-    axios
-      .put(`http://localhost:5000/api/budgets/${_id}`, {
+    API.put(`/api/budgets/${_id}`
+      , {
         category,
         spent: Number(spent),
         budget: Number(budget),
         month
       }, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
       .then(() => {
         setEditModal(false);
         setEditBudget(null);
