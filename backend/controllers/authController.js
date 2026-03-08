@@ -21,7 +21,7 @@ const registerUser = async (req, res) => {
     res.json({
       token,
       user: {
-        id: newUseruser._id,
+        id: newUser._id,
         name: newUser.name,
         email: newUser.email
       }
