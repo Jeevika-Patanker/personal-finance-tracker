@@ -10,19 +10,27 @@ const Register = ({ onAuthSuccess }) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const API = process.env.REACT_APP_API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const res = await axios.post(
-        "https://finance-tracker-api.onrender.com/api/auth/register",
-        form);
+        `${API}/api/auth/register`,
+        form
+      );
+
       localStorage.setItem("token", res.data.token);
-      alert("Successful");
+
+      alert("Registration successful");
       onAuthSuccess();
+
     } catch (err) {
       alert(err.response?.data?.msg || "Registration failed");
     }
   };
+
 
   return (
     <div className="auth-container">

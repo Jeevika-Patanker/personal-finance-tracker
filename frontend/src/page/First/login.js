@@ -11,18 +11,17 @@ const Login = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const API = process.env.REACT_APP_API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        "https://finance-tracker-api.onrender.com/api/auth/login",
-        form);
+      const res = await axios.post(`${API}/api/auth/login`, form);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userId", res.data.user.id);
       localStorage.setItem("userName", res.data.user.name);
       localStorage.setItem("userEmail", res.data.user.email);
-
 
       alert("Login successful");
       navigate("/dashboard");
@@ -30,6 +29,7 @@ const Login = () => {
       alert(err.response?.data?.msg || "Login failed");
     }
   };
+
 
   return (
     <div className="auth-container">
